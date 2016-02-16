@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46D3F077-237F-450F-BE28-6760659D8BFD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VBLoan.frm_login</StartupObject>
+    <RootNamespace>VBLoan</RootNamespace>
+    <AssemblyName>VBLoan</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VBLoan.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VBLoan.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Custom-Icon-Design-Flatastic-11-Cash.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm_loaner.Designer.vb">
+      <DependentUpon>frm_loaner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_loaner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_loaner_all_info.Designer.vb">
+      <DependentUpon>frm_loaner_all_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_loaner_all_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_loaner_detail.Designer.vb">
+      <DependentUpon>frm_loaner_detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_loaner_detail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_loaner_payment.Designer.vb">
+      <DependentUpon>frm_loaner_payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_loaner_payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.vb">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_main.Designer.vb">
+      <DependentUpon>frm_main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_user.Designer.vb">
+      <DependentUpon>frm_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan\loandto\LoanDetailsDto.vb" />
+    <Compile Include="Loan\loandto\LoanDto.vb" />
+    <Compile Include="Loan\loandto\LoanerDto.vb" />
+    <Compile Include="Loan\loandto\UserDto.vb" />
+    <Compile Include="Loan\loanServices\UserService.vb" />
+    <Compile Include="Loan\loanServices\UserServiceImpl.vb" />
+    <Compile Include="Loan\messageForm\message_information.Designer.vb">
+      <DependentUpon>message_information.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\messageForm\message_information.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan\messageForm\message_operation.Designer.vb">
+      <DependentUpon>message_operation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\messageForm\message_operation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan\Utils\LoanConnection.vb" />
+    <Compile Include="Loan\Utils\StringUtils.vb" />
+    <Compile Include="Loan\Utils\UserUtils.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frm_loaner.resx">
+      <DependentUpon>frm_loaner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_loaner_all_info.resx">
+      <DependentUpon>frm_loaner_all_info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_loaner_detail.resx">
+      <DependentUpon>frm_loaner_detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_loaner_payment.resx">
+      <DependentUpon>frm_loaner_payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_main.resx">
+      <DependentUpon>frm_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_user.resx">
+      <DependentUpon>frm_user.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\messageForm\message_information.resx">
+      <DependentUpon>message_information.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan\messageForm\message_operation.resx">
+      <DependentUpon>message_operation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_style7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_menu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_menu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_menu3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_menu4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_menu41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_menu5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_menu6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_user.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_edit_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8-People.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Custom-Icon-Design-Flatastic-11-Cash.ico" />
+    <Content Include="Resources\0000_외화송금-어드민-초기화면_151218.png" />
+    <Content Include="Resources\0001.png" />
+    <Content Include="Resources\Admin-ចូលទៅកាន់គណនីរបស់អ្នក.png" />
+    <None Include="Resources\Edit-52.png" />
+    <None Include="Resources\Edit-validated-icon.png" />
+    <Content Include="Resources\edit.png" />
+    <Content Include="Resources\edit1.png" />
+    <None Include="Resources\group-delete-icon.png" />
+    <None Include="Resources\group-error-icon.png" />
+    <Content Include="Resources\ico_list_all_loaner.png" />
+    <None Include="Resources\information-icon.png" />
+    <Content Include="Resources\Layer-2.png" />
+    <Content Include="Resources\Layer-21.png" />
+    <Content Include="Resources\list.png" />
+    <Content Include="Resources\main_title.png" />
+    <Content Include="Resources\main_title1.png" />
+    <Content Include="Resources\main_title2.png" />
+    <Content Include="Resources\main_title3.png" />
+    <None Include="Resources\Male-user-add-icon.png" />
+    <Content Include="Resources\setting.png" />
+    <Content Include="Resources\XXXX.png" />
+    <None Include="Resources\zoom-refresh-icon.png" />
+    <Content Include="Resources\កម្ចីប្រាក់.png" />
+    <Content Include="Resources\ការកម្ចីប្រាក់.png" />
+    <Content Include="Resources\ការកម្ចីប្រាក់1.png" />
+    <Content Include="Resources\ការកម្ចីប្រាក់2.png" />
+    <Content Include="Resources\បញ្ជីកម្ចីប្រាក់.png" />
+    <Content Include="Resources\លេខសម្ងាត់.png" />
+    <Content Include="Resources\អ្នកប្រើប្រាស់.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
